@@ -1,0 +1,4 @@
+execute as @s[nbt={Item:{id:"minecraft:skeleton_skull"}}] if entity @e[type=item_frame,tag=!boomber.enchantment.enchanter,distance=..6,limit=1,nbt={Item:{id:"minecraft:emerald_block"}}] if entity @e[type=item_frame,tag=!boomber.enchantment.enchanter,distance=..6,limit=1,nbt={Item:{id:"minecraft:tnt"}}] if entity @e[type=item_frame,tag=!boomber.enchantment.enchanter,distance=..6,limit=1,nbt={Item:{id:"minecraft:gunpowder"}}] if entity @e[type=item_frame,tag=!boomber.enchantment.enchanter,distance=..6,limit=1,nbt={Item:{id:"minecraft:command_block"}}] run tag @s add boomber.enchantment.found_recipe
+execute as @s[tag=boomber.enchantment.found_recipe] run tag @s add boomber.enchantment.id.boomber
+execute as @s[tag=boomber.enchantment.found_recipe] run scoreboard players set @s bb.enchantTime 120
+execute as @s[tag=boomber.enchantment.found_recipe] run tag @s remove boomber.enchantment.found_recipe
